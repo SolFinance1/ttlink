@@ -1,0 +1,337 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Ensure proper viewport handling */
+        html {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-image: url('TgBG.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Fix for iOS Safari background-attachment issue */
+        @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+            }
+        }
+
+        .top-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .telegram-logo-header {
+            width: 32px;
+            height: 32px;
+            color: #2196F3;
+            margin-right: 12px;
+        }
+
+        .header-title {
+            font-size: 20px;
+            font-weight: 500;
+            color: #333;
+            flex-grow: 1;
+        }
+
+        .download-button {
+            background: #2196F3;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .download-button:hover {
+            background: #1976D2;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 60px);
+            padding: 80px 20px 20px;
+            width: 100%;
+        }
+
+        .telegram-preview {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 0 auto;
+        }
+
+        .telegram-preview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2196F3, #21CBF3);
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 4px solid #e0e0e0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #f0f0f0;
+            position: relative;
+        }
+
+        .channel-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .subscriber-count {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.4;
+            margin-bottom: 30px;
+        }
+
+        .channel-content {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .join-button {
+            background: linear-gradient(135deg, #2196F3, #21CBF3);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .join-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(33, 150, 243, 0.3);
+        }
+
+        .join-button:active {
+            transform: translateY(0);
+        }
+
+        .preview-text {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .fallback-text {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .top-header {
+                padding: 10px 15px;
+            }
+            
+            .telegram-logo-header {
+                width: 28px;
+                height: 28px;
+            }
+            
+            .header-title {
+                font-size: 18px;
+            }
+            
+            .download-button {
+                font-size: 13px;
+                padding: 6px 14px;
+            }
+            
+            .main-content {
+                padding: 70px 15px 15px;
+            }
+            
+            .telegram-preview {
+                padding: 30px 25px;
+                margin: 10px;
+                max-width: 350px;
+            }
+            
+            .profile-image {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 15px;
+            }
+            
+            .channel-name {
+                font-size: 24px;
+                margin-bottom: 6px;
+            }
+            
+            .subscriber-count {
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .description {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+            
+            .channel-content {
+                font-size: 13px;
+                padding: 12px;
+                margin-bottom: 25px;
+            }
+            
+            .join-button {
+                font-size: 15px;
+                padding: 14px 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .telegram-preview {
+                padding: 25px 20px;
+                margin: 5px;
+                max-width: calc(100vw - 20px);
+            }
+            
+            .profile-image {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .profile-image::before {
+                font-size: 9px;
+            }
+            
+            .channel-name {
+                font-size: 22px;
+            }
+            
+            .description {
+                font-size: 13px;
+            }
+            
+            .fallback-text {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .telegram-preview {
+                padding: 20px 15px;
+            }
+            
+            .header-title {
+                font-size: 16px;
+            }
+            
+            .download-button {
+                font-size: 12px;
+                padding: 5px 12px;
+            }
+        }
+
+        /* Landscape mobile devices */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .main-content {
+                padding: 70px 20px 20px;
+                min-height: calc(100vh - 60px);
+            }
+            
+            .telegram-preview {
+                padding: 20px 25px;
+            }
+            
+            .profile-image {
+                width: 70px;
+                height: 70px;
+                margin-bottom: 10px;
+            }
+            
+            .channel-name {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+            
+            .subscriber-count {
+                margin-bottom: 10px;
+            }
+            
+            .description {
+                margin-bottom: 15px;
+            }
+            
+            .channel-content {
+                margin-bottom: 15px;
+                padding: 10px;
+            }
+        }
